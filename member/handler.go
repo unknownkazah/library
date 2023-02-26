@@ -10,16 +10,16 @@ func Create(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
 
-	u := &member{}
-	if err := c.Bind(u); err != nil { // 5
+	m := &member{}
+	if err = c.Bind(m); err != nil { // 5
 		return err
 	}
-	u.ID = database.Sequence
+	m.ID = database.Sequence
 
-	database.Members[u.ID] = u
+	database.Map[m.ID] = m
 	database.Sequence++
 
-	return c.JSON(http.StatusCreated, u)
+	return c.JSON(http.StatusCreated, m)
 }
 
 func Get(c echo.Context) (err error) {
@@ -27,21 +27,21 @@ func Get(c echo.Context) (err error) {
 	defer database.Unlock()
 
 	id, err := strconv.Atoi(c.Param("id"))
-	return c.JSON(http.StatusOK, database.Members[id])
+	return c.JSON(http.StatusOK, database.Map[id])
 }
 
 func GetAll(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
-	return c.JSON(http.StatusOK, database.Members)
+	return c.JSON(http.StatusOK, database.Map)
 }
 
 func Update(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
 
-	u := new(member)
-	if err := c.Bind(u); err != nil {
+	m := new(member)
+	if err = c.Bind(m); err != nil {
 		return err
 	}
 
@@ -50,11 +50,11 @@ func Update(c echo.Context) (err error) {
 		return
 	}
 
-	database.Members[id].Name = u.Name
-	database.Members[id].Lastname = u.Lastname
-	database.Members[id].BorrowedBooks = u.BorrowedBooks
+	database.Map[id].Name = m.Name
+	database.Map[id].Lastname = m.Lastname
+	database.Map[id].BorrowedBooks = m.BorrowedBooks
 
-	return c.JSON(http.StatusOK, database.Members[id])
+	return c.JSON(http.StatusOK, database.Map[id])
 
 }
 
@@ -63,7 +63,7 @@ func Delete(c echo.Context) (err error) {
 	defer database.Unlock()
 
 	id, err := strconv.Atoi(c.Param("id"))
-	delete(database.Members, id)
+	delete(database.Map, id)
 
 	return c.NoContent(http.StatusNoContent)
 }

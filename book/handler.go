@@ -10,16 +10,16 @@ func Create(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
 
-	u := &book{}
-	if err := c.Bind(u); err != nil { // 5
+	b := &book{}
+	if err = c.Bind(b); err != nil { // 5
 		return err
 	}
-	u.ID = database.Sequence
+	b.ID = database.Sequence
 
-	database.Map[u.ID] = u
+	database.Map[b.ID] = b
 	database.Sequence++
 
-	return c.JSON(http.StatusCreated, u)
+	return c.JSON(http.StatusCreated, b)
 }
 
 func Get(c echo.Context) (err error) {
@@ -33,6 +33,7 @@ func Get(c echo.Context) (err error) {
 func GetAll(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
+
 	return c.JSON(http.StatusOK, database.Map)
 }
 
@@ -49,6 +50,7 @@ func Update(c echo.Context) (err error) {
 	if err != nil {
 		return
 	}
+
 	database.Map[id].Title = b.Title
 	database.Map[id].Genre = b.Genre
 	database.Map[id].CodeISBN = b.CodeISBN

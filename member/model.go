@@ -10,13 +10,13 @@ type member struct {
 }
 
 type table struct {
-	Members  map[int]*member
+	Map      map[int]*member
 	Sequence int
 	sync.Mutex
 }
 
 var database = table{
-	Members:  map[int]*member{},
+	Map:      map[int]*member{},
 	Sequence: 1,
 	Mutex:    sync.Mutex{},
 }
