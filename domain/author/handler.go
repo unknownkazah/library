@@ -1,25 +1,26 @@
-package book
+package author
 
 import (
-	"github.com/labstack/echo/v4"
 	"net/http"
 	"strconv"
+
+	"github.com/labstack/echo/v4"
 )
 
 func Create(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
 
-	b := &book{}
-	if err = c.Bind(b); err != nil { // 5
-		return err
+	a := &author{}
+	if err = c.Bind(a); err != nil {
+		return
 	}
-	b.ID = database.Sequence
+	a.ID = database.Index
 
-	database.Map[b.ID] = b
-	database.Sequence++
+	database.Map[a.ID] = a
+	database.Index++
 
-	return c.JSON(http.StatusCreated, b)
+	return c.JSON(http.StatusCreated, a)
 }
 
 func Get(c echo.Context) (err error) {
@@ -27,6 +28,10 @@ func Get(c echo.Context) (err error) {
 	defer database.Unlock()
 
 	id, err := strconv.Atoi(c.Param("id"))
+	if err != nil {
+		return
+	}
+
 	return c.JSON(http.StatusOK, database.Map[id])
 }
 
@@ -41,8 +46,8 @@ func Update(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
 
-	b := new(book)
-	if err = c.Bind(b); err != nil {
+	a := new(author)
+	if err = c.Bind(a); err != nil {
 		return
 	}
 
@@ -51,12 +56,12 @@ func Update(c echo.Context) (err error) {
 		return
 	}
 
-	database.Map[id].Title = b.Title
-	database.Map[id].Genre = b.Genre
-	database.Map[id].CodeISBN = b.CodeISBN
+	database.Map[id].Name = a.Name
+	database.Map[id].Lastname = a.Lastname
+	database.Map[id].Username = a.Username
+	database.Map[id].Specialization = a.Specialization
 
 	return c.JSON(http.StatusOK, database.Map[id])
-
 }
 
 func Delete(c echo.Context) (err error) {
@@ -64,6 +69,9 @@ func Delete(c echo.Context) (err error) {
 	defer database.Unlock()
 
 	id, err := strconv.Atoi(c.Param("id"))
+	if err != nil {
+		return
+	}
 	delete(database.Map, id)
 
 	return c.NoContent(http.StatusNoContent)

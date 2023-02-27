@@ -1,25 +1,26 @@
-package author
+package member
 
 import (
-	"github.com/labstack/echo/v4"
 	"net/http"
 	"strconv"
+
+	"github.com/labstack/echo/v4"
 )
 
 func Create(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
 
-	a := &author{}
-	if err = c.Bind(a); err != nil {
-		return
+	m := &member{}
+	if err = c.Bind(m); err != nil { // 5
+		return err
 	}
-	a.ID = database.Index
+	m.ID = database.Sequence
 
-	database.Map[a.ID] = a
-	database.Index++
+	database.Map[m.ID] = m
+	database.Sequence++
 
-	return c.JSON(http.StatusCreated, a)
+	return c.JSON(http.StatusCreated, m)
 }
 
 func Get(c echo.Context) (err error) {
@@ -27,17 +28,12 @@ func Get(c echo.Context) (err error) {
 	defer database.Unlock()
 
 	id, err := strconv.Atoi(c.Param("id"))
-	if err != nil {
-		return
-	}
-
 	return c.JSON(http.StatusOK, database.Map[id])
 }
 
 func GetAll(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
-
 	return c.JSON(http.StatusOK, database.Map)
 }
 
@@ -45,9 +41,9 @@ func Update(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
 
-	a := new(author)
-	if err = c.Bind(a); err != nil {
-		return
+	m := new(member)
+	if err = c.Bind(m); err != nil {
+		return err
 	}
 
 	id, err := strconv.Atoi(c.Param("id"))
@@ -55,12 +51,12 @@ func Update(c echo.Context) (err error) {
 		return
 	}
 
-	database.Map[id].Name = a.Name
-	database.Map[id].Lastname = a.Lastname
-	database.Map[id].Username = a.Username
-	database.Map[id].Specialization = a.Specialization
+	database.Map[id].Name = m.Name
+	database.Map[id].Lastname = m.Lastname
+	database.Map[id].BorrowedBooks = m.BorrowedBooks
 
 	return c.JSON(http.StatusOK, database.Map[id])
+
 }
 
 func Delete(c echo.Context) (err error) {
@@ -68,9 +64,6 @@ func Delete(c echo.Context) (err error) {
 	defer database.Unlock()
 
 	id, err := strconv.Atoi(c.Param("id"))
-	if err != nil {
-		return
-	}
 	delete(database.Map, id)
 
 	return c.NoContent(http.StatusNoContent)

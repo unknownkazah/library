@@ -1,9 +1,9 @@
 package main
 
 import (
-	"bibliotekaProject/author"
-	"bibliotekaProject/book"
-	"bibliotekaProject/member"
+	"bibliotekaProject/domain/author"
+	"bibliotekaProject/domain/book"
+	"bibliotekaProject/domain/member"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )

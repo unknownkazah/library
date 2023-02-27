@@ -1,25 +1,26 @@
-package member
+package book
 
 import (
-	"github.com/labstack/echo/v4"
 	"net/http"
 	"strconv"
+
+	"github.com/labstack/echo/v4"
 )
 
 func Create(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
 
-	m := &member{}
-	if err = c.Bind(m); err != nil { // 5
+	b := &book{}
+	if err = c.Bind(b); err != nil { // 5
 		return err
 	}
-	m.ID = database.Sequence
+	b.ID = database.Sequence
 
-	database.Map[m.ID] = m
+	database.Map[b.ID] = b
 	database.Sequence++
 
-	return c.JSON(http.StatusCreated, m)
+	return c.JSON(http.StatusCreated, b)
 }
 
 func Get(c echo.Context) (err error) {
@@ -33,6 +34,7 @@ func Get(c echo.Context) (err error) {
 func GetAll(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
+
 	return c.JSON(http.StatusOK, database.Map)
 }
 
@@ -40,9 +42,9 @@ func Update(c echo.Context) (err error) {
 	database.Lock()
 	defer database.Unlock()
 
-	m := new(member)
-	if err = c.Bind(m); err != nil {
-		return err
+	b := new(book)
+	if err = c.Bind(b); err != nil {
+		return
 	}
 
 	id, err := strconv.Atoi(c.Param("id"))
@@ -50,9 +52,9 @@ func Update(c echo.Context) (err error) {
 		return
 	}
 
-	database.Map[id].Name = m.Name
-	database.Map[id].Lastname = m.Lastname
-	database.Map[id].BorrowedBooks = m.BorrowedBooks
+	database.Map[id].Title = b.Title
+	database.Map[id].Genre = b.Genre
+	database.Map[id].CodeISBN = b.CodeISBN
 
 	return c.JSON(http.StatusOK, database.Map[id])
 
