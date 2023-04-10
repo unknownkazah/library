@@ -7,14 +7,12 @@ import (
 	"net/http"
 )
 
-
 type Crud interface {
-	Create(c echo.Context)(err error)
+	Create(c echo.Context) (err error)
 	Get(c echo.Context) (err error)
 	GetAll(c echo.Context) (err error)
 	Update(c echo.Context) (err error)
 	Delete(c echo.Context) (err error)
-
 }
 
 type Handler struct {
@@ -112,19 +110,18 @@ func (h *Handler) Delete(c echo.Context) (err error) {
 //	}
 //
 //	return c.JSON(http.StatusOK, data)
-	//
-	//authorBooks := []book.Book{}
-	//for _, bookid := range books {
-	//	if bookid.ID == id {
-	//		authorBooks = append(authorBooks, bookid)
-	//	}
-	//}
-	//_, err = h.storage.GetRowByID(id)
-	//if err != nil {
-	//	if err == sql.ErrNoRows {
-	//		return c.String(http.StatusNotFound, err.Error())
-	//	}
-	//	return c.String(http.StatusInternalServerError, err.Error())
-	//}
-	//return c.JSON(http.StatusOK, authorBooks)
-}
+//
+//authorBooks := []book.Book{}
+//for _, bookid := range books {
+//	if bookid.ID == id {
+//		authorBooks = append(authorBooks, bookid)
+//	}
+//}
+//_, err = h.storage.GetRowByID(id)
+//if err != nil {
+//	if err == sql.ErrNoRows {
+//		return c.String(http.StatusNotFound, err.Error())
+//	}
+//	return c.String(http.StatusInternalServerError, err.Error())
+//}
+//return c.JSON(http.StatusOK, authorBooks)

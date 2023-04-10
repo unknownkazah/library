@@ -59,7 +59,7 @@ func main() {
 	authorsGroup := apiGroup.Group("/authors")
 	authorsGroup.POST("", authorHandler.Create)
 	authorsGroup.GET("/:id", authorHandler.Get)
-	authorsGroup.GET("/:id/book", authorHandler.GetBooksByAuthorID)
+	//qauthorsGroup.GET("/:id/book", authorHandler.GetBooksByAuthorID)
 	authorsGroup.GET("", authorHandler.GetAll)
 	authorsGroup.PUT("/:id", authorHandler.Update)
 	authorsGroup.DELETE("/:id", authorHandler.Delete)
