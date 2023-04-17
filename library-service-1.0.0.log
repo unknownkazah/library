@@ -1,0 +1,84 @@
+{"level":"warn","ts":1681377161.929847,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"error","ts":1681377161.930062,"caller":"app/app.go:32","msg":"ERR_INIT_CONFIG","error":"open /Users/rakhmet_zhanserik/go/src/bibliotekaProject/.env: no such file or directory","stacktrace":"bibliotekaProject/internal/app.Run\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/internal/app/app.go:32\nmain.main\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/main.go:9\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250"}
+{"level":"warn","ts":1681377212.488471,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"error","ts":1681377212.488565,"caller":"app/app.go:32","msg":"ERR_INIT_CONFIG","error":"open /Users/rakhmet_zhanserik/go/src/bibliotekaProject/.env: no such file or directory","stacktrace":"bibliotekaProject/internal/app.Run\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/internal/app/app.go:32\nmain.main\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/main.go:9\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250"}
+{"level":"warn","ts":1681377218.533967,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"error","ts":1681377218.534047,"caller":"app/app.go:32","msg":"ERR_INIT_CONFIG","error":"open /Users/rakhmet_zhanserik/go/src/bibliotekaProject/.env: no such file or directory","stacktrace":"bibliotekaProject/internal/app.Run\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/internal/app/app.go:32\nmain.main\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/main.go:9\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250"}
+{"level":"warn","ts":1681377220.3562381,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"error","ts":1681377220.3563561,"caller":"app/app.go:32","msg":"ERR_INIT_CONFIG","error":"open /Users/rakhmet_zhanserik/go/src/bibliotekaProject/.env: no such file or directory","stacktrace":"bibliotekaProject/internal/app.Run\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/internal/app/app.go:32\nmain.main\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/main.go:9\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250"}
+{"level":"warn","ts":1681378835.764689,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"error","ts":1681378835.764989,"caller":"app/app.go:38","msg":"ERR_INIT_POSTGRES","error":"sql: unknown data source name ","errorVerbose":"sql: unknown data source name \nbibliotekaProject/pkg/database.New\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/pkg/database/database.go:16\nbibliotekaProject/internal/app.Run\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/internal/app/app.go:36\nmain.main\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/main.go:9\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_arm64.s:1172","stacktrace":"bibliotekaProject/internal/app.Run\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/internal/app/app.go:38\nmain.main\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/main.go:9\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250"}
+{"level":"warn","ts":1681379299.690153,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681379299.852642,"caller":"app/app.go:68","msg":"Server started on http://localhost:80"}
+{"level":"warn","ts":1681379325.7046971,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681379325.802324,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681379366.133536,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681379366.194658,"caller":"app/app.go:68","msg":"Server started on http://localhost:80"}
+{"level":"warn","ts":1681379404.13024,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681379404.1930492,"caller":"app/app.go:68","msg":"Server started on http://localhost:"}
+{"level":"warn","ts":1681379415.031499,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681379415.089244,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681381393.170999,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681381393.23597,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681384401.198349,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681384401.325034,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681384897.7675798,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681384897.851069,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681384986.892595,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681384986.958956,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681385177.3367722,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681385177.398988,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681387837.7866051,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681387837.880265,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681704848.7680352,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681704848.892599,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681705204.017517,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681705204.153499,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681705276.172708,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681705276.346095,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681705549.8636658,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681705549.95712,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681705797.5951512,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681705797.717545,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681706045.245399,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681706045.3026829,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681706546.376544,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681706546.450212,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681708585.564102,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"error","ts":1681708585.564464,"caller":"app/app.go:38","msg":"ERR_INIT_POSTGRES","error":"sql: unknown driver \"jdbc:postgresql\" (forgotten import?)","stacktrace":"bibliotekaProject/internal/app.Run\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/internal/app/app.go:38\nmain.main\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/main.go:9\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250"}
+{"level":"warn","ts":1681708715.761436,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"error","ts":1681708715.76174,"caller":"app/app.go:38","msg":"ERR_INIT_POSTGRES","error":"sql: unknown driver \"postgresql\" (forgotten import?)","stacktrace":"bibliotekaProject/internal/app.Run\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/internal/app/app.go:38\nmain.main\n\t/Users/rakhmet_zhanserik/go/src/bibliotekaProject/main.go:9\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:250"}
+{"level":"warn","ts":1681708753.8479402,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681708754.0423622,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681708889.4642901,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681708889.559083,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681709001.206212,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681709001.300095,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681709085.8396459,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681709085.921963,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681710213.497026,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681710213.620199,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681710842.2405639,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681710842.367645,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681710874.2804701,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681710874.4006789,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681711317.946938,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681711318.097871,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681713943.9492302,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681713944.131941,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681714071.2531142,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681714071.41937,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681714469.264241,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681714469.5014038,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681714590.700088,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681714590.8286889,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681714746.701483,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681714746.863358,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681714793.365758,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681714793.493964,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681714859.544239,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681714859.660226,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681714971.97087,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681714972.253966,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681716671.899812,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681716672.067424,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}

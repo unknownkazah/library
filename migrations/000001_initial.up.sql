@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS books
      id         SERIAL PRIMARY KEY,
      title      VARCHAR NOT NULL,
      genre      VARCHAR NOT NULL,
+     id_author_books VARCHAR NOT NULL,
      code_isbn  INTEGER NOT NULL
   );
 
