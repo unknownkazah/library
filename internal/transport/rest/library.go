@@ -2,7 +2,6 @@ package rest
 
 import (
 	"bibliotekaProject/internal/dto"
-	"bibliotekaProject/internal/entity"
 	"database/sql"
 	"net/http"
 
@@ -42,8 +41,6 @@ func (h *Handler) GetAuthor(c *gin.Context) {
 
 	c.JSON(http.StatusOK, res)
 }
-
-var authorBooks []entity.Book
 
 func (h *Handler) GetBooksByAuthorID(c *gin.Context) {
 	id_author_books := c.Param("id")
@@ -250,6 +247,22 @@ func (h *Handler) UpdateMember(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, req)
+}
+
+func (h *Handler) GetMemberIdBooks(c *gin.Context) {
+	id := c.Param("id")
+	data, err := h.libraries.GetMemberIdBooks(id)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			c.String(http.StatusNotFound, err.Error())
+			return
+		}
+		c.String(http.StatusInternalServerError, err.Error())
+		return
+	}
+
+	c.JSON(http.StatusOK, data)
+	return
 }
 
 func (h *Handler) DeleteMember(c *gin.Context) {

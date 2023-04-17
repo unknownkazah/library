@@ -16,12 +16,12 @@ type Handler struct {
 	postgresDSN string
 }
 
-func NewHandler(googleURL, postgresDSN string) *Handler {
-	return &Handler{
-		googleURL:   googleURL,
-		postgresDSN: postgresDSN,
-	}
-}
+//func NewHandler(googleURL, postgresDSN string) *Handler {
+//	return &Handler{
+//		googleURL:   googleURL,
+//		postgresDSN: postgresDSN,
+//	}
+//}
 
 func (h *Handler) Healthcheck(c echo.Context) (err error) {
 	check, err := health.New(

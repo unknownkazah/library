@@ -28,5 +28,6 @@ CREATE TABLE IF NOT EXISTS members
      id             SERIAL PRIMARY KEY,
      name           VARCHAR NOT NULL,
      lastname       VARCHAR NOT NULL,
-     borrowed_books VARCHAR NOT NULL
+     borrowed_books VARCHAR NOT NULL,
+     member_id_books VARCHAR NOT NULL
   );

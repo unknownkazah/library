@@ -24,11 +24,11 @@ func (s *MemberRepository) CreateRow(data entity.Member) (dest string, err error
 	defer cancel()
 
 	query := `
-		INSERT INTO members (name, lastname, borrowed_books)
-		VALUES ($1, $2, $3)
+		INSERT INTO members (name, lastname, borrowed_books, member_id_books)
+		VALUES ($1, $2, $3, $4)
 		RETURNING id`
 
-	args := []any{data.Name, data.Lastname, data.BorrowedBooks}
+	args := []any{data.Name, data.Lastname, data.BorrowedBooks, data.MemberIdBooks}
 
 	err = s.db.QueryRowContext(ctx, query, args...).Scan(&dest)
 
@@ -40,7 +40,7 @@ func (s *MemberRepository) GetRowByID(id string) (dest entity.Member, err error)
 	defer cancel()
 
 	query := `
-		SELECT id, name, lastname, borrowed_books
+		SELECT id,member_id_books, name, lastname, borrowed_books
 		FROM members
 		WHERE id=$1`
 
@@ -56,11 +56,27 @@ func (s *MemberRepository) SelectRows() (dest []entity.Member, err error) {
 	defer cancel()
 
 	query := `
-		SELECT id, name, lastname, borrowed_books
+		SELECT id,member_id_books, name, lastname, borrowed_books
 		FROM members
 		ORDER BY created_at`
 
 	err = s.db.SelectContext(ctx, &dest, query)
+
+	return
+}
+
+func (s *MemberRepository) SelectMemberIdBooks(MemberID string) (dest []entity.Member, err error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	query := `
+		SELECT member_id_books, id , name, lastname, borrowed_books
+		FROM members
+		WHERE member_id_books=$1`
+
+	args := []any{MemberID}
+
+	err = s.db.SelectContext(ctx, &dest, query, args...)
 
 	return
 }

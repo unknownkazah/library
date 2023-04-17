@@ -5,4 +5,5 @@ type Member struct {
 	Name          *string `db:"name"`
 	Lastname      *string `db:"lastname"`
 	BorrowedBooks *string `db:"borrowed_books"`
+	MemberIdBooks *string `db:"member_id_books"`
 }

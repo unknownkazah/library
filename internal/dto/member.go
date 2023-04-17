@@ -7,6 +7,7 @@ type MemberRequest struct {
 	Name          string `db:"name"`
 	Lastname      string `db:"lastname"`
 	BorrowedBooks string `db:"borrowed_books"`
+	MemberIdBooks string `db:"member_id_books"`
 }
 
 type MemberResponse struct {
@@ -14,6 +15,7 @@ type MemberResponse struct {
 	Name          string `db:"name"`
 	Lastname      string `db:"lastname"`
 	BorrowedBooks string `db:"borrowed_books"`
+	MemberIdBooks string `db:"member_id_books"`
 }
 
 func ParseFromMember(src entity.Member) (dst MemberResponse) {
@@ -22,6 +24,7 @@ func ParseFromMember(src entity.Member) (dst MemberResponse) {
 		Name:          *src.Name,
 		Lastname:      *src.Lastname,
 		BorrowedBooks: *src.BorrowedBooks,
+		MemberIdBooks: *src.MemberIdBooks,
 	}
 
 	return

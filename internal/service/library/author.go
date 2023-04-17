@@ -42,18 +42,18 @@ func (s *Service) GetAuthors() (res []dto.AuthorResponse, err error) {
 	return
 }
 
-func (s *Service) GetBooksByAuthorID(id string) (res dto.BookResponse, err error) {
+func (s *Service) GetBooksByAuthorID(id string) (res []dto.BookResponse, err error) {
 	book, err := s.books.SelectBookByAuthorID(id)
 	if err != nil {
 		return
 	}
-	res = dto.ParseFromBook(book)
+	res = dto.ParseFromBooks(book)
 
 	return
 
 }
 
-//aa
+// aa
 func (s *Service) UpdateAuthor(req dto.AuthorRequest) (err error) {
 	author := entity.Author{
 		Name:           &req.Name,

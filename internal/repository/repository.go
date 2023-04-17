@@ -13,7 +13,7 @@ type AuthorRepository interface {
 type BookRepository interface {
 	CreateRow(data entity.Book) (dest string, err error)
 	GetRowByID(id string) (dest entity.Book, err error)
-	SelectBookByAuthorID(id_author_books string) (dest entity.Book, err error)
+	SelectBookByAuthorID(authorID string) (dest []entity.Book, err error)
 	SelectRows() (dest []entity.Book, err error)
 	UpdateRow(data entity.Book) (err error)
 	DeleteRow(id string) (err error)
@@ -22,6 +22,7 @@ type BookRepository interface {
 type MemberRepository interface {
 	CreateRow(data entity.Member) (dest string, err error)
 	GetRowByID(id string) (dest entity.Member, err error)
+	SelectMemberIdBooks(member_id_books string) (dest []entity.Member, err error)
 	SelectRows() (dest []entity.Member, err error)
 	UpdateRow(data entity.Member) (err error)
 	DeleteRow(id string) (err error)

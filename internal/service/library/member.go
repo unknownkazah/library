@@ -10,6 +10,7 @@ func (s *Service) CreateMember(req dto.MemberRequest) (res dto.MemberResponse, e
 		Name:          &req.Name,
 		Lastname:      &req.Lastname,
 		BorrowedBooks: &req.BorrowedBooks,
+		MemberIdBooks: &req.MemberIdBooks,
 	}
 
 	data.ID, err = s.members.CreateRow(data)
@@ -39,6 +40,17 @@ func (s *Service) GetMembers() (res []dto.MemberResponse, err error) {
 	res = dto.ParseFromMembers(data)
 
 	return
+}
+
+func (s *Service) GetMemberIdBooks(id string) (res []dto.MemberResponse, err error) {
+	book, err := s.members.SelectMemberIdBooks(id)
+	if err != nil {
+		return
+	}
+	res = dto.ParseFromMembers(book)
+
+	return
+
 }
 
 func (s *Service) UpdateMember(req dto.MemberRequest) (err error) {

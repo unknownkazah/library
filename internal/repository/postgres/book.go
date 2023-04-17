@@ -52,7 +52,7 @@ func (s *BookRepository) GetRowByID(id string) (dest entity.Book, err error) {
 	return
 }
 
-func (s *BookRepository) SelectBookByAuthorID(id_author_books string) (dest entity.Book, err error) {
+func (s *BookRepository) SelectBookByAuthorID(authorID string) (dest []entity.Book, err error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
@@ -61,9 +61,9 @@ func (s *BookRepository) SelectBookByAuthorID(id_author_books string) (dest enti
 		FROM books
 		WHERE id_author_books=$1`
 
-	args := []any{id_author_books}
+	args := []any{authorID}
 
-	err = s.db.GetContext(ctx, &dest, query, args...)
+	err = s.db.SelectContext(ctx, &dest, query, args...)
 
 	return
 }

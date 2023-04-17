@@ -58,6 +58,7 @@ func (h *Handler) Init() http.Handler {
 		members.POST("", h.CreateMember)
 		members.GET("", h.GetMembers)
 		members.GET("/:id", h.GetMember)
+		members.GET("/:id/books", h.GetMemberIdBooks)
 		members.PUT("/:id", h.UpdateMember)
 		members.DELETE("/:id", h.DeleteMember)
 	}

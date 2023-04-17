@@ -82,3 +82,31 @@
 {"level":"info","ts":1681714972.253966,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
 {"level":"warn","ts":1681716671.899812,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
 {"level":"info","ts":1681716672.067424,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681717470.9569228,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681717471.0918589,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681717518.759064,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681717518.8785548,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681717610.280087,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681717610.407736,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681717889.24383,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681717889.338142,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681719472.948788,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681719473.122251,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681719796.107275,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681719796.229279,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681720642.781628,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681720642.896061,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681720787.150285,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681720787.228426,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681720834.29273,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681720834.433663,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681722674.975335,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681722675.13785,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681722768.8491058,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681722768.9608479,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681722848.5793211,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681722848.680752,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681725042.539513,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681725042.710057,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
+{"level":"warn","ts":1681725282.538338,"caller":"app/logger.go:36","msg":"Logger sync fail","error":"sync /dev/stdout: inappropriate ioctl for device"}
+{"level":"info","ts":1681725282.668243,"caller":"app/app.go:68","msg":"Server started on http://localhost:8080"}
